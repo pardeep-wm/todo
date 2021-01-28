@@ -3,7 +3,10 @@ Rails.application.routes.draw do
   namespace :api do
     resources :todo_items do
       collection do
-        get :items_by_tag 
+        get :items_by_tag
+      end
+      member do
+        put :mark_unmark_delete
       end
     end
   end

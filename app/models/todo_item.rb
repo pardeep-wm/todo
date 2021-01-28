@@ -8,6 +8,7 @@ class TodoItem
   validates_uniqueness_of :name
   field :name, type: String
   field :status, type: Integer, default: 0
+  field :is_deleted, type: Boolean, default: false
 
 
   has_and_belongs_to_many :tags
